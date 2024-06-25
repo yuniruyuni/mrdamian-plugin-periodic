@@ -7,7 +7,7 @@ type PeriodicConfig = ComponentConfig & {
   interval: number;
 };
 
-export class Periodic extends Component<PeriodicConfig> {
+export default class Periodic extends Component<PeriodicConfig> {
   async init(config: PeriodicConfig): Promise<Field> {
     this.start(config);
     return undefined;
