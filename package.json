@@ -1,42 +1,36 @@
 {
-  "name": "mrdamian-plugin-periodic",
-  "productName": "mrdamian-plugin-periodic",
-  "description": "Mr.Damian plugin for triggering periodic event",
-  "homepage": "https://github.com/yuniruyuni/mrdamian-plugin-periodic/README.md",
-  "repository": "https://github.com/yuniruyuni/mrdamian-plugin-periodic",
-  "bugs": "https://github.com/yuniruyuni/mrdamian-plugin-periodic/issues",
-  "version": "0.0.2",
-  "author": {
-    "name": "yuniruyuni",
-    "email": "yuniruyuni@gmail.com"
-  },
-  "files": [
-    "index.ts",
-    "tsconfig.json",
-    "dist"
-  ],
-  "keywords": [
-    "mrdamian"
-  ],
-  "license": "MIT",
-  "main": "index.ts",
-  "type": "module",
-  "scripts": {
-    "check": "biome check --write",
-    "format": "biome format --write",
-    "lint": "biome lint",
-    "test": "bun test",
-    "type": "tsc --noEmit"
-  },
-  "dependencies": {
-    "mrdamian": "^0.0.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.8.1",
-    "@types/bun": "^1.1.4",
-    "@types/node": "^20.14.4",
-    "bun": "^1.1.13",
-    "npm-run-all2": "^6.2.0",
-    "typescript": "^5.4.5"
-  }
+	"name": "mrdamian-plugin-periodic",
+	"productName": "mrdamian-plugin-periodic",
+	"description": "Mr.Damian plugin for triggering periodic event",
+	"homepage": "https://github.com/yuniruyuni/mrdamian-plugin-periodic/README.md",
+	"repository": "https://github.com/yuniruyuni/mrdamian-plugin-periodic",
+	"bugs": "https://github.com/yuniruyuni/mrdamian-plugin-periodic/issues",
+	"version": "0.0.3",
+	"author": {
+		"name": "yuniruyuni",
+		"email": "yuniruyuni@gmail.com"
+	},
+	"files": ["index.ts", "tsconfig.json", "dist"],
+	"keywords": ["mrdamian"],
+	"license": "MIT",
+	"main": "index.ts",
+	"type": "module",
+	"scripts": {
+		"check": "biome check --write",
+		"format": "biome format --write",
+		"lint": "biome lint",
+		"test": "bun test",
+		"type": "tsc --noEmit"
+	},
+	"dependencies": {
+		"mrdamian": "^0.0.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.1",
+		"@types/bun": "^1.1.4",
+		"@types/node": "^20.14.4",
+		"bun": "^1.1.13",
+		"npm-run-all2": "^6.2.0",
+		"typescript": "^5.4.5"
+	}
 }
