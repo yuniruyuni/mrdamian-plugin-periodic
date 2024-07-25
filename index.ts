@@ -1,28 +1,28 @@
 import { setTimeout } from "node:timers/promises";
-import type { Component, ComponentConfig, EventEmitter } from "mrdamian-plugin";
+import type { Action, Component, EventEmitter } from "mrdamian-plugin";
 
-type PeriodicConfig = ComponentConfig & {
+type PeriodicAction = Action & {
 	interval: number;
 };
 
 class Runner {
 	running = true;
 	stop(){ this.running = false; }
-	async run(config: PeriodicConfig, emitter: EventEmitter): Promise<void> {
+	async run(action: PeriodicAction, emitter: EventEmitter): Promise<void> {
 		while( this.running ) {
-			await setTimeout(config.interval);
+			await setTimeout(action.interval);
 			emitter.emit(true);
 		}
 	}
 }
 
-export default class Periodic implements Component<PeriodicConfig> {
+export default class Periodic implements Component<PeriodicAction> {
 	runner: Runner = new Runner();
 
-	async start(config: PeriodicConfig, emitter: EventEmitter): Promise<void> {
+	async start(action: PeriodicAction, emitter: EventEmitter): Promise<void> {
 		this.runner.stop();
 		this.runner = new Runner();
-		this.runner.run(config, emitter);
+		this.runner.run(action, emitter);
 	}
 
 	async stop(): Promise<void> {
